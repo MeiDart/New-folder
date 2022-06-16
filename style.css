@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 0px 26px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+}
+
+.main-wrapper header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.8s;
+  margin-bottom: 2rem;
+}
+
+.main-wrapper header h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  opacity: 0.6;
+}
+
+.main-wrapper #notify {
+  display: flex;
+  width: 0px;
+  height: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(84, 236, 132, 0.637);
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgb(223, 223, 223);
+  transition: 0.8s;
+  margin-top: 2rem;
+}
+
+#btn-user-form {
+  margin-left: 30px; 
+  width: 60px; 
+  height: 60px; 
+  border-radius: 30px;
+  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  box-shadow: 1px 3px 8px gray;
+}
+
+#btn-user-form ion-icon {
+  font-size: 24px;
+  color: white;
+  transition: 0.5s;
+}
+
+#notify-text {
+  opacity: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  transition: 1s;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 2px 4px 12px rgb(211, 211, 211);
+}
+
+#user-form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 0px;
+  transition: 0.8s;
+}
+
+.user-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 24px;
+}
+
+.user-input {
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgb(241, 241, 241);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #5F5E5E;
+  padding-left: 16px;
+}
+
+.input-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.input-title ion-icon {
+  font-size: 22px;
+  opacity: 0.4;
+}
+
+.input-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-left: 13px;
+  opacity: 0.7;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  padding: 14px 0px;
+  margin-top: 0.6rem;
+}
+
+.btn {
+  width: 90%;
+  height: 5rem;
+  box-shadow: 1px 4px 10px rgb(148, 141, 141);
+  background-color: #9e8fb2;
+  background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  margin: 14px 0px;
+}
+
+.btn:hover {
+  transform: scale(1.02, 1.02);
+}
+
+#user-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  overflow-y: scroll;
+  background-color: white;
+  padding: 12px 0px;
+  transition: 0.8s;
+}
+
+#btn-load-more {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  padding: 10px 0px;
+  margin: 30px 0px;
+  transition: 0s;
+}
+
+#btn-load-more ion-icon {
+  font-size: 24px;
+}
+
+#users-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  width: 90%;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: white;
+  box-shadow: -2px 3px 14px rgb(236, 236, 236);
+  margin: 18px 0px;
+  transition: 0.4s;
+  animation-name: example;
+  animation-duration: 1.5s;
+}
+
+@keyframes example {
+  from { margin-top: -10px; }
+  to { margin-top: 18px; }
+}
+
+.user:hover {
+  transform: scale(1.04, 1.04);
+}
+
+.user img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+}
+
+.infos {
+  padding-left: 40px;
+  line-height: 2;
+}
+
+.infos-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.6;
+}
+
+.user-email {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  opacity: 0.4;
+}
+
+#popup {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+  z-index: 1000;
+  transition: 1s;
+}
+
+#popup-inner {
+  width: 30rem;
+  height: 18rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+}
+
+#popup-inner-user {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  padding-left: 14px;
+}
+
+#popup-inner-user img {
+  width: 120px;
+  height: 120px; 
+  border-radius: 14px;
+}
+
+.popup-inner-notifi {
+  height: 50%;
+  padding: 18px 14px;
+}
+
+.popup-inner-notifi h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  opacity: 0.6;
+}
+
+.notifi-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.notifi-btns button {
+  width: 48%;
+  height: 4rem;
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+#notifi-btn-ok {
+  color: rgb(71, 216, 27);
+  background-color: rgb(167, 245, 148);
+}
+
+#notifi-btn-ok:hover {
+  background-color: rgb(138, 243, 112);
+}
+
+#notifi-btn-cancel {
+  color: rgb(245, 75, 75);
+  background-color: rgb(253, 180, 170);
+}
+
+#notifi-btn-cancel:hover {
+  background-color: rgb(255, 158, 145);
+}
+
+@media screen and (max-width: 912px) {
+  .main-container {
+    height: auto;
+    flex-direction: column;
+  }
+  .user-inputs { margin-top: 24px; } 
+  #user-form { width: 100% !important; }
+  .input-title { margin-bottom: 0.6rem; }
+  .buttons { margin-top: 1.8rem; }
+  .btn { height: 4.5rem; }
+  #user-list {
+    width: 100% !important;
+    overflow: hidden;
+    height: inherit
+  }
+  .main-wrapper header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-wrapper header h4 {
+    margin-bottom: 10px;
+  }
+}
+

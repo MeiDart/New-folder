@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test API</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <div id="popup">
+      <div id="popup-inner">
+        <div id="popup-inner-user">
+          <img src="https://tinyurl.com/3447zdrm" alt="avatar"/>
+          <div class="infos-wrapper">
+            <div class="infos">
+              <h3 class="user-name">Minh Pham</h3>
+              <p class="user-email">minhphm37@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="popup-inner-notifi">
+          <h2>Are you sure to delete?</h2>
+          <div class="notifi-btns">
+            <button id="notifi-btn-ok">Accept</button>
+            <button id="notifi-btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="main-wrapper">
+        <header>
+          <div style="display: flex; align-items: center;">
+            <h4>Users</h4>
+            <button id="btn-user-form">
+              <ion-icon id="ic-left" name="chevron-back-outline"></ion-icon>
+            </button>
+          </div>
+          <div id="notify">
+            <p id="notify-text">Thêm user thành công</p>
+          </div>
+        </header>
+        <main class="main-container">
+          <div id="user-form">
+            <form class="user-inputs">
+              <div class="input-form">
+                <div class="input-title">
+                  <ion-icon name="person"></ion-icon>
+                  <label class="input-label">Tên</label>
+                </div>
+                <input id="input-name" class="user-input" type="text"/>
+              </div>
+              <div class="input-form">
+                <div class="input-title">
+                  <ion-icon name="mail"></ion-icon>
+                  <label class="input-label">Email</label>
+                </div>
+                <input id="input-email" class="user-input" type="text"/>
+              </div>
+            </form>
+            <div class="buttons">
+              <button id="add-user-btn" class="btn">Thêm user</button>
+              <button id="update-user-btn" class="btn">Cập nhật user</button>
+              <button id="delete-user-btn" class="btn">Xóa user</button>
+              <button id="reload-user-btn" class="btn">Reset users</button>
+              <button id="clear-inputs" class="btn">Clear</button>
+            </div>
+          </div>
+          <div id="user-list">
+            <div id="users-wrapper"></div>
+            <button class="btn "id="btn-load-more">more</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script src="JS/App.js"></script>
+</html>
